@@ -1,0 +1,11 @@
+const nome = 'Willton';
+const sobrenome = "Xavier";
+const idade = 24;
+const peso = 84;
+const altura = 1.80;
+let imc;
+imc = peso/(altura*altura);
+let anoNasc;
+anoNasc = 2024 - idade;
+console.log(nome,sobrenome,'tem',idade,"anos","pesa",peso,"kg tem",altura,"de altura e seu IMC e de",imc);
+console.log(nome,sobrenome,'nasceu em',anoNasc);
