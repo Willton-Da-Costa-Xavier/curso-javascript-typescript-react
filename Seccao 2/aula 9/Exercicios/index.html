@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+</head>
+<body>
+    
+    <script>
+        const numero = Number(prompt("Digite o seu nome"));
+
+        document.body.innerHTML += `<h1>Seu numero e ${numero}</h1>`
+        document.body.innerHTML += `Raiz quadrada:  ${Math.pow(numero,2)} <br>`
+        document.body.innerHTML += `${numero} e inteiro:  ${Number.isInteger(numero)} <br>`
+        document.body.innerHTML += `E NaN:  ${Number.isNaN(numero)} <br>`
+        document.body.innerHTML += `Arredondando para baixo:  ${Math.floor(numero)} <br>`
+        document.body.innerHTML += `Arredondando para cima:  ${Math.ceil(numero)} <br>`
+        document.body.innerHTML += `Com duas casas decimais:  ${numero.toFixed(2)} <br>`
+         
+    
+    </script>
+</body>
+</html>
