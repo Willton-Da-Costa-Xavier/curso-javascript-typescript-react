@@ -1,0 +1,30 @@
+<!-- Para imcluir html utiliza o comando "<#%- include('caminho') %>" sem o "#" -->
+<%- include('includes/head') %>
+
+
+    <section class="container">
+        <h1>
+            <!-- Para utilizar o ejs utiliza se o comando de "<" junto com "%= valor injetado" e "%>" para fechar e e mais seguro porque nao escapa os caracters-->
+
+            <!-- o "<" e "%-" executa o html -->
+
+            <!-- Para utilizar o ejs utiliza o comando "<" e "%" para executar o fluxo como for,if,while,etc -->
+
+            <!-- Para comentar no ejs e utilizando "#" depois da abaertura da tag "<%# %>" -->
+
+            <%= csrfToken %>
+
+
+        </h1>
+
+<!-- Para usar o 'csrfToken' utiliza o campo de "input type='hidden'" e coloca o no value = '<#% csrfToken %>' -->
+        <form action="/" method="post">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <label>Cliente</label>
+            <input type="text" name="cliente" id="">
+            <button>Submit</button>
+        </form>
+
+    </section>
+
+<%- include('includes/footer') %>

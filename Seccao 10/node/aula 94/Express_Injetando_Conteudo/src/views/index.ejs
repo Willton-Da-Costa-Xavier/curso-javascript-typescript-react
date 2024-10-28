@@ -1,0 +1,29 @@
+<!-- Para imcluir html utiliza o comando "<#%- include('caminho') %>" sem o "#" -->
+<%- include('includes/head') %>
+
+
+    <section class="container">
+        <h1>
+            <!-- Para utilizar o ejs utiliza se o comando de "<" junto com "%= valor injetado" e "%>" para fechar e e mais seguro porque nao escapa os caracters-->
+
+            <!-- o "<" e "%-" executa o html -->
+
+            <!-- Para utilizar o ejs utiliza o comando "<" e "%" para executar o fluxo como for,if,while,etc -->
+
+            <!-- Para comentar no ejs e utilizando "#" depois da abaertura da tag "<%# %>" -->
+
+            <%= umaVariavelGlobal %>
+
+
+        </h1>
+
+
+        <form action="/" method="post">
+            <label>Cliente</label>
+            <input type="text" name="cliente" id="">
+            <button>Submit</button>
+        </form>
+
+    </section>
+
+<%- include('includes/footer') %>
