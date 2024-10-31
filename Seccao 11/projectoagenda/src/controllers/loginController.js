@@ -1,11 +1,13 @@
 const Login = require("../models/Login");
+
 exports.index = (req,res,next) =>{
-    res.render('login');
+    if(req.session.user) return res.render('login-logado');
+    return res.render('login');
 }
 
-exports.register = async (req,res) => {
+exports.login = async (req,res) => {
     const login = new Login(req.body);
-    await login.register();
+    await login.login();
 
     try {
         
@@ -18,16 +20,24 @@ exports.register = async (req,res) => {
             });
             return;
         }
-        req.flash('success',"Seu usuario foi criado com sucesso");
 
+
+        req.flash('success',"Voce entrou no sistema");
+        req.session.user = login.user;
         req.session.save(function(){
             
             return res.redirect('back');
         });
 
     } catch (error) {
-        console.log(e);
+        console.log(error);
         return res.render('404');     
     }
 
+}
+
+exports.logout = (req, res) => {
+    // Para fazer logout utiliza o comando "req.session.destroy()"
+    req.session.destroy();
+    res.redirect('/')
 }
