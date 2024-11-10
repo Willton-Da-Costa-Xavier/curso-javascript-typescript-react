@@ -11,10 +11,13 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "eslint": "^6.6.0",
+    "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.31.0",
     "nodemon": "^3.1.7",
     "sucrase": "^3.35.0"
+  },
+  "dependencies": {
+    "express": "^4.21.1"
   }
 }
