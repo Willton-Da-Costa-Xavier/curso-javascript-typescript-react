@@ -21,5 +21,6 @@ module.exports = {
     'import/newline-after-import': 'off',
     'no-param-reassign': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'no-empty-function': 'off',
   },
 };
