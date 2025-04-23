@@ -24,6 +24,7 @@ module.exports = {
   ],
   rules: {
     'react/jsx-filename-extension': 0,
-    'requireConfigFile': false,
+    'react/state-in-constructor': 0,
+    'no-unused-vars': 0,
   },
 };
