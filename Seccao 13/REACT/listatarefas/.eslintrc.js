@@ -23,8 +23,9 @@ module.exports = {
     'react',
   ],
   rules: {
-    'react/jsx-filename-extension': 0,
-    'react/state-in-constructor': 0,
-    'no-unused-vars': 0,
+    'react/jsx-filename-extension': false,
+    'react/state-in-constructor': false,
+    'no-unused-vars': false,
+    'import/no-duplicates': false,
   },
 };
