@@ -16,6 +16,12 @@ class AlunoController {
   async store(req, res) {
     try {
       const aluno = Aluno.create(req.body);
+      const {
+        id, nome, sobenome, email, idade, peso, altura,
+      } = aluno;
+      return res.json({
+        id, nome, sobenome, email, idade, peso, altura,
+      });
     } catch (e) {
       return res.status(400).json({
         errors: e.errors.map((err) => err.message),
