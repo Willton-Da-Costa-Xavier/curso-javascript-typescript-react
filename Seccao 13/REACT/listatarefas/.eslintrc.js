@@ -24,10 +24,11 @@ module.exports = {
   ],
   rules: {
     'react/jsx-filename-extension': 0,
-    'react/state-in-constructor': false,
-    'no-unused-vars': false,
-    'import/no-duplicates': false,
+    'react/state-in-constructor': 0,
+    'no-unused-vars': 0,
+    'import/no-duplicates': 0,
     "rest-spread-spacing": 0,
-    "react/no-unused-state": false,
+    "react/no-unused-state": 0,
+    "react/forbid-prop-types": 0,
   },
 };
