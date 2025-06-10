@@ -1,14 +1,16 @@
 import React from 'react';
+import { Container } from '../../styles/GlobalStyles';
 import { Title, Paragrafo } from './styled';
 
 export default function Login() {
   return (
-    <React.Fragment>
+    <Container>
       <Title>
         Login
         <small>Oie</small>
       </Title>
       <Paragrafo>Loren6</Paragrafo>
-    </React.Fragment>
+      <button type="button">Enviar</button>
+    </Container>
   );
 }
