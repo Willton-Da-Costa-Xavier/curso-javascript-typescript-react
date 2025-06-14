@@ -1,5 +1,7 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { unstable_HistoryRouter as HistoryRouter } from 'react-router-dom';
+
+import history from './services/history';
 
 import GlobalStyles from './styles/GlobalStyles';
 import Header from './components/Header';
@@ -7,11 +9,11 @@ import Routers from './routes';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HistoryRouter history={history}>
       <Header />
       <Routers />
       <GlobalStyles />;
-    </BrowserRouter>
+    </HistoryRouter>
   );
 }
 
