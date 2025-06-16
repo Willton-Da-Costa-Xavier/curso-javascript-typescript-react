@@ -1,23 +1,13 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import createSagaMiddleware from 'redux-saga';
+import rootReducer from './modules/rootReducer';
 
-const initialState = {
-  botaoClicado: false,
-};
+import rootSaga from './modules/rootSaga';
 
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case 'Botao_Clicado': {
-      const newState = { ...state };
-      newState.botaoClicado = !newState.botaoClicado;
-      return newState;
-    }
+const sagaMiddleware = createSagaMiddleware();
 
-    default: {
-      return state;
-    }
-  }
-};
+const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 
-const store = createStore(reducer);
+sagaMiddleware.run(rootSaga);
 
 export default store;
