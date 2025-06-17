@@ -40,17 +40,17 @@ export default createGlobalStyle`
   }
 
   body .Toastify .Toastify__toast-container .Toastify__toast--sucess {
-    background: ${colors.sucessColor}; 
+    background: ${colors.sucessColor};
   }
 
   body .Toastify .Toastify__toast-container .Toastify__toast--error {
-    background: ${colors.errorColor}; 
+    background: ${colors.errorColor};
   }
 
 `;
 
 export const Container = styled.section`
-  max-width: 360px;
+  max-width: 480px;
   background: #fff;
   margin: 30px auto;
   padding: 30px;
