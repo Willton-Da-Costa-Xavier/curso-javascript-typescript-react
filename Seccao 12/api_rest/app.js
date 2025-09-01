@@ -4,6 +4,7 @@ dotenv.config();
 
 import './src/database';
 import express from 'express';
+import cors from 'cors';
 import homeRoutes from './src/routes/homeRoutes';
 import userRoutes from './src/routes/userRoutes';
 import tokensRoutes from './src/routes/tokenRoutes';
@@ -18,6 +19,11 @@ class App {
   }
 
   middlewares() {
+    // === Adiciona CORS aqui ===
+    this.app.use(cors({
+      origin: 'http://localhost:3000', // React frontend
+      credentials: true, // se usar cookies ou autenticação
+    }));
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.json());
     this.app.use(express.static(resolve(__dirname, 'uploads')));
