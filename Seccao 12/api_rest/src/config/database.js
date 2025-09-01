@@ -15,7 +15,5 @@ module.exports = {
   },
   dialectOptions: {
     connectTimeout: 10000,
-    timezone: 'Africa/Maputo',
   },
-  timezone: 'Africa/Maputo',
 };
