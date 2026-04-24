@@ -1,5 +1,5 @@
-import Aluno from '../models/Aluno';
-import Foto from '../models/Foto';
+import Aluno from '../models/Aluno.js';
+import Foto from '../models/Foto.js';
 class AlunoController {
   async index(req, res) {
     const alunos = await Aluno.findAll({

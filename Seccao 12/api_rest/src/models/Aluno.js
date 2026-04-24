@@ -1,5 +1,5 @@
 import { Model, DataTypes } from 'sequelize';
-import Foto from './Foto';
+import Foto from './Foto.js';
 
 export default class Aluno extends Model {
   static init(sequelize) {

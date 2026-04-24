@@ -1,15 +1,19 @@
 import dotenv from 'dotenv';
-import { resolve } from 'path';
+import { fileURLToPath } from 'url';
+import { dirname, resolve } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 dotenv.config();
 
-import './src/database';
+import './src/config/database.js';
 import express from 'express';
 import cors from 'cors';
-import homeRoutes from './src/routes/homeRoutes';
-import userRoutes from './src/routes/userRoutes';
-import tokensRoutes from './src/routes/tokenRoutes';
-import alunoRoutes from './src/routes/alunoRoutes';
-import fotoRoutes from './src/routes/fotoRoutes';
+import homeRoutes from './src/routes/homeRoutes.js';
+import userRoutes from './src/routes/userRoutes.js';
+import tokensRoutes from './src/routes/tokenRoutes.js';
+import alunoRoutes from './src/routes/alunoRoutes.js';
+import fotoRoutes from './src/routes/fotoRoutes.js';
 
 class App {
   constructor() {
