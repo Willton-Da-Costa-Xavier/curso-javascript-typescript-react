@@ -15,7 +15,9 @@ export const Redirect = () => {
         }, 1000);
 
         if(time <= 0){
-            navigate('/');
+            navigate('/about', {
+                state: `This is the state: ${Math.random()}`,
+            });
         }
 
         return () => {
@@ -26,7 +28,7 @@ export const Redirect = () => {
 
     return (
         <div>
-            <h1>Get out fo here in: {time}</h1>
+            <h1>Get out from here in: {time}</h1>
         </div>
     )
 };

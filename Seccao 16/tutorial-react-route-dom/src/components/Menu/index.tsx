@@ -11,7 +11,7 @@ export const Menu = () => {
                 </li>
 
                 <li>
-                    <Link to="/about">About</Link>
+                    <Link to="/about" state={'This is State from About'}>About</Link>
                 </li>
 
                 <li>
