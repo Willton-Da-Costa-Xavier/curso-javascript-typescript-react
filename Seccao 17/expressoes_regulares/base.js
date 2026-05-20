@@ -16,11 +16,17 @@ const arquivos = [
     'Meu gatinho.jpg',
     'Meu gatinho.JPG',
     'Meu gatinho.JPEG',
+    'Meu gatinho.JPeeEEEeeeeeeeeeeeeeeeeeeeeeeeeEEEEEEEEG',
     'Marido.png',
     'lista de compras.txt',
 ];
 
+const alfabeto = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789'
+const html = '<p>Ola mundo</p> <p>Ola de novo</p> <div>Sou a div</div>';
+
 module.exports = {
     texto,
-    arquivos
+    arquivos,
+    html,
+    alfabeto
 }
